@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import StartGame from "./components/StartGame/StartGame";
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route, HashRouter} from "react-router-dom";
 import TablePlayer from "./components/TablePlayer/TablePlayer";
 import GameStart from "./components/GameStart/GameStart";
 import Quiz from "./components/Quiz/Quiz";
@@ -305,7 +305,7 @@ const suffleAnswers = () =>{
 
     return(
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <Route path = "/" exact>
                     <StartGame suffle={suffle}/>
                 </Route>
@@ -325,7 +325,7 @@ const suffleAnswers = () =>{
                           newQuestions={newQuestions}
                           />
                 </Route>
-            </BrowserRouter>
+            </HashRouter>
         </>
     )
 }

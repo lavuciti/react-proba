@@ -17,6 +17,10 @@ function Quiz(props, {Questions, Responds, Answers, playerCard}){
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
             setDisplayMobilOne(false);
         }
+        setCopyPlayerCard(props.playerCard);
+        if (props.Questions ===  "Proba") {
+            props.history.push("/choosePlayer");
+        }
     },[])
 
     const [roundNumber, setRoundNumber] = useState(3)
