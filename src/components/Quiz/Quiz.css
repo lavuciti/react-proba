@@ -1,0 +1,34 @@
+.questions{
+    font-size: 1.5rem;
+}
+#startAddPlayer .card{
+    width: 18rem;
+}
+.textWrong{
+    color: red;
+}
+.textCorrect{
+    color: blue;
+}
+.options{
+    height: 440px;
+}
+.playerBtnQuiz{
+    line-height: 90px !important;
+    font-size: 45px !important;
+}
+@media(max-width: 768px){
+
+    .textWrong{
+      margin-top: 5px;
+      font-size: 30px;
+      margin-bottom: 5px !important;
+    }
+    .textCorrect{
+      font-size: 30px;
+      margin-bottom: 5px !important;
+    }
+    .quiz .h-100{
+      height: auto !important;
+    }
+  }

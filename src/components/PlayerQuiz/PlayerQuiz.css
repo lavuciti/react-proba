@@ -1,0 +1,36 @@
+.player {
+    padding: 30px 50px;
+    box-shadow: 0 0 8px;
+    box-sizing: border-box !important;
+    margin: 50px 0 !important;
+  }
+  
+  .player img {
+    height: 235px;
+    object-fit: cover;
+    width: 75%;
+  }
+  
+  .player h2 {
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+  }
+  
+  #scorePlayer, #countRounds {
+    font-weight: 450;
+    font-size: 1.5rem;
+  }
+  
+  #playerBtn {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+
+  @media(max-width: 768px){
+    .player{
+      margin: 0 !important;
+    }
+    .quiz h4{
+      margin-bottom: 0.8rem !important;
+    }
+  }

@@ -1,0 +1,102 @@
+/* * * * * * * * * * * * * * * * * Global * * * * * * * * * * * * * * * * */
+  
+  * {
+    -webkit-box-sizing: content-box !important;
+       -moz-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: content-box !important;
+       -moz-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+  } 
+      
+  /* * * * * * * * * * * * * * * * * Quiz * * * * * * * * * * * * * * * * */
+
+.options {
+  justify-content: center;
+}
+
+.quiz {
+  width: 600px !important;
+  height: 540px;
+  margin: 50px 0;
+  box-shadow: 0 0 8px;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  display: flex;
+}
+
+.option {
+  width: 200px;
+  height: 120px;
+  margin: 50px;
+  box-shadow: 0 0 3px;
+  float: left;
+  font-size: 28px;
+  box-sizing: content-box !important;
+}
+
+.displayBorderBlue {
+  border: 3px solid blue;
+}
+
+.displayBorderRed {
+  border: 3px solid red;
+}
+
+.option:hover {
+  cursor: pointer;
+  background-color: azure;
+}
+
+.optionP {
+  height: 100%;
+  display: block;
+  color: #212529 !important;
+  text-decoration: none;
+}
+
+/*************************
+        Responsive
+*************************/
+
+@media(max-width: 768px){
+  *{
+    box-sizing: border-box !important;
+  }
+  .quiz{
+    box-shadow: none;
+    margin: 0 !important;
+    flex-direction: column;
+  }
+  .quiz .options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 15px;
+  }
+  .quiz .option{
+    margin: 20px !important;
+  }
+  .player{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  .player img{
+    height: 200px !important;
+  }
+  .questions{
+    font-size: 20px !important;
+  }
+  }

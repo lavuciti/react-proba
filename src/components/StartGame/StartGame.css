@@ -1,0 +1,42 @@
+/* * * * * * * * * * * * * * * * * Global * * * * * * * * * * * * * * * * */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.displayNone {
+  display: none;
+}
+
+  /* * * * * * * * * * * * * * * * * Button * * * * * * * * * * * * * * * * */
+
+  .playerBtn {
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: 0 0 3px;
+    line-height: 200px !important;
+    text-align: center;
+    font-size: 35px !important;
+  }
+  
+   /* * * * * * * * * * * * * * * * * Table * * * * * * * * * * * * * * * * */
+   .options {
+    justify-content: center;
+  }
+  
+  .quiz {
+    width: 600px !important;
+    height: 540px;
+    margin: 50px 0 !important;
+    box-shadow: 0 0 8px;
+    padding: 0;
+  }
+  
+  header {
+    height: 100px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    display: flex;
+  }
+  
