@@ -18,7 +18,7 @@ function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton
 
         <div className="player text-center col-4">
             <h2>{playerQuiz.capitalPlayer}</h2>
-            <img src={"../img/"+playerQuiz.player+".jpg"} className="card-img-top" alt={playerQuiz.capitalPlayer}></img>
+            <img src={"https://lavuciti.github.io/react-proba/img/"+playerQuiz.player+".jpg"} className="card-img-top" alt={playerQuiz.capitalPlayer}></img>
             <div className="card-body">
                 <p id="scorePlayer"className="lead">Ukupno poena : {score}</p>
                 <p id = "countRounds" className = "pt-1">Pitanje {questionNumber}</p>
