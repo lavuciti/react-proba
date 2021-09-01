@@ -2,7 +2,7 @@ import React from 'react';
 import "./PlayerQuiz.css";
 
 
-function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton}){
+function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton, displayMobileThree, displayMobileFour}){
      //aktivno dugme koje ako editButton posalje true tada je prvi button a ako posalje false tada je drugi button
     const actionButtons = editButton ? (
         <>
@@ -17,8 +17,9 @@ function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton
      return(
 
         <div className="player text-center col-4">
-            <h2>{playerQuiz.capitalPlayer}</h2>
+            {displayMobileThree && <h2>{playerQuiz.capitalPlayer}</h2>}
             <img src={"https://lavuciti.github.io/react-proba/img/"+playerQuiz.player+".jpg"} className="card-img-top" alt={playerQuiz.capitalPlayer}></img>
+            {displayMobileFour && <h2>{playerQuiz.capitalPlayer}</h2>}
             <div className="card-body">
                 <p id="scorePlayer"className="lead">Ukupno poena : {score}</p>
                 <p id = "countRounds" className = "pt-1">Pitanje {questionNumber}</p>

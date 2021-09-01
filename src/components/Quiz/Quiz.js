@@ -35,7 +35,8 @@ function Quiz(props, {Questions, Responds, Answers, playerCard}){
     const[disappearQuestion, setDisappearQuestion] = useState("");
     const[displayMobileOne, setDisplayMobilOne] = useState (true);
     const[displayMobileTwo, setDisplayMobilTwo] = useState (false);
-
+    const[displayMobileThree, setDisplayMobilThree] = useState (true);
+    const[displayMobileFour, setDisplayMobilFour] = useState (false);
 
     //kada se klikne na neki od odgovora tada editButton postaje true, zbog aktivnog button dugmeta
     //props.new... pokrece funkciju u App.js i bitno je staviti u return tu funkciju da bi radilo
@@ -91,6 +92,8 @@ function Quiz(props, {Questions, Responds, Answers, playerCard}){
     const detectMobile = () =>{
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
             setDisplayMobilTwo(true);
+            setDisplayMobilThree(false)
+            setDisplayMobilFour(true);
         }
     }
 
@@ -101,7 +104,9 @@ function Quiz(props, {Questions, Responds, Answers, playerCard}){
                         questionNumber={questionNumber} 
                         score = {score} 
                         nextQuestion = {nextQuestion}
-                        editButton={editButton}/>
+                        editButton={editButton}
+                        displayMobileThree = {displayMobileThree}
+                        displayMobileFour = {displayMobileFour}/>
         )
     })
 
@@ -109,39 +114,41 @@ function Quiz(props, {Questions, Responds, Answers, playerCard}){
         <div className="container">
             <div className="row justify-content-around">
 
-            {/* da bi ovo radilo mora da se playerTable stavi u array zagradama */}
-            {displayMobileOne && [playerTable]}
+                {/* da bi ovo radilo mora da se playerTable stavi u array zagradama */}
+                {displayMobileOne && [playerTable]}
 
                 <div id="game" className="quiz col-8">
-                    <header className="justify-content-center align-items-center">
-                        <h1 className ={"questions "+ disappearQuestion}>{props.Questions}</h1>
+                    <div class="d-flex flex-column">
+                        <header className="justify-content-center align-items-center">
+                            <h1 className ={"questions "+ disappearQuestion}>{props.Questions}</h1>
 
-                        {displayTextWinner && <h1 className ="questions">{props.playerCard[0].capitalPlayer} je {endGame()} ukupno {score} poena
-                        <br></br>***** CESTITAMO *****</h1>} 
-                                                                    
-                    </header>
+                            {displayTextWinner && <h1 className ="questions">{props.playerCard[0].capitalPlayer} je {endGame()} ukupno {score} poena
+                            <br></br>***** CESTITAMO *****</h1>} 
+                                                                        
+                        </header>
 
-                    <div className="options text-center">
-                        
-                        {displayTextCorrect && <div className="d-flex flex-column justify-content-center align-items-center h-100">
-                                <h1 className="textCorrect mb-5">Tacan odgovor!</h1>
+                        <div className="options text-center">
+                            
+                            {displayTextCorrect && <div className="d-flex flex-column justify-content-center align-items-center w-100">
+                                    <h1 className="textCorrect">Tacan odgovor!</h1>
+                                </div>}
+                            
+                            {displayTextWrong && <div className="d-flex flex-column justify-content-center align-items-center w-100">
+                                <h1 className="textWrong">Pogresan odgovor!</h1>
+                                <h4>Tacan odgovor je: {props.Responds}</h4>
                             </div>}
-                        
-                        {displayTextWrong && <div className="d-flex flex-column justify-content-center align-items-center h-100">
-                            <h1 className="mb-4 textWrong">Pogresan odgovor!</h1>
-                            <h4 className="mb-5">Tacan odgovor je: {props.Responds}</h4>
-                        </div>}
 
-                        {displayMobileTwo &&  [playerTable]}
+                            {displayMobileTwo &&  [playerTable]}
 
-                        {props.Answers.map((Answers, index)=> 
-                                <div key = {index} className={"option" +disappearOption}>
-                                    <div onClick={()=>{witchRespond(Answers)}} className="button optionP d-flex justify-content-center align-items-center">{Answers}</div>
-                                </div>   
-                        )}
+                            {props.Answers.map((Answers, index)=> 
+                                    <div key = {index} className={"option" +disappearOption}>
+                                        <div onClick={()=>{witchRespond(Answers)}} className="button optionP d-flex justify-content-center align-items-center">{Answers}</div>
+                                    </div>   
+                            )}
 
-                        {displayTextEnd && <Link to="/" className="btn btn-primary playerBtn playerBtnQuiz">Pokrenite novu igru</Link>}
-
+                            {displayTextEnd && <Link to="/" className="btn btn-primary playerBtn playerBtnQuiz">Pokrenite novu igru</Link>}
+                            
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StartGame from "./components/StartGame/StartGame";
 import {Route, HashRouter} from "react-router-dom";
 import TablePlayer from "./components/TablePlayer/TablePlayer";
-import GameStart from "./components/GameStart/GameStart";
+import QuizStart from "./components/QuizStart/QuizStart";
 import Quiz from "./components/Quiz/Quiz";
 
 function App(){
@@ -313,7 +313,7 @@ const suffleAnswers = () =>{
                     <TablePlayer card={card} shuffleOption={shuffleOption} choosenPlayer={choosenPlayer}/>
                 </Route>
                 <Route path = "/game">
-                    <GameStart options={options} chooseOption={chooseOption}/>
+                    <QuizStart options={options} chooseOption={chooseOption}/>
                 </Route>
                 <Route path = "/quiz" >
                     <Quiz Questions={Questions} 

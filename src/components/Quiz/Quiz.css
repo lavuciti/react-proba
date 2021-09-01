@@ -6,9 +6,12 @@
 }
 .textWrong{
     color: red;
+    margin-bottom: 1.5rem;
+    margin-top: 130px;
 }
 .textCorrect{
     color: blue;
+    margin-top: 150px;
 }
 .options{
     height: 440px;
@@ -26,9 +29,18 @@
     }
     .textCorrect{
       font-size: 30px;
-      margin-bottom: 5px !important;
+      margin-bottom: 30px !important;
+      margin-top: 10px;
     }
     .quiz .h-100{
       height: auto !important;
     }
+    .quiz {
+      margin: 0 !important;
+    }
+    .quiz .w-100{
+      border-bottom: 1px solid #ddd;
+    }
   }
+
+  

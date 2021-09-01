@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./GameStart.css";
+import "./QuizStart.css";
 
 
-function GameStart({options, chooseOption}){
+function QuizStart({options, chooseOption}){
     
     return(
         <div className="container">
@@ -29,4 +29,4 @@ function GameStart({options, chooseOption}){
     )
 }
 
-export default GameStart;
+export default QuizStart;
