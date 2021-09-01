@@ -7,7 +7,7 @@ import "./Player.css";
 function Player({card, shuffleOption, choosenPlayer}){
      return(
         <div id={card.player} className="card">
-            <img src={"https://lavuciti.github.io/react-prob/img/"+card.player+".jpg"} className="card-img-top" alt={card.capitalPlayer}></img>
+            <img src={"https://lavuciti.github.io/react-proba/img/"+card.player+".jpg"} className="card-img-top" alt={card.capitalPlayer}></img>
             <h5 className="card-title">{card.capitalPlayer}</h5>
             <p className="card-text">{card.text}</p>
             <Link to="/game" onClick={()=>{shuffleOption(); choosenPlayer(card.player)}} id={card.player+"Btn"} className={"btn btn-"+card.colorBtn}>Izaberite {card.casePlayer}</Link>
