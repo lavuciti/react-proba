@@ -132,7 +132,7 @@ function App(){
             }
             else{
               const responsive = {
-                height : window.screen.height - 150 + "px"
+                height : window.screen.height - 120 + "px"
              }
              setResponsiveHeight(responsive)
             }
