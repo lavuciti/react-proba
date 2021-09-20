@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StartGame from "./components/StartGame/StartGame";
-import {Route, HashRouter} from "react-router-dom";
+import {Switch, Route, useLocation} from "react-router-dom";
 import TablePlayer from "./components/TablePlayer/TablePlayer";
 import QuizStart from "./components/QuizStart/QuizStart";
 import Quiz from "./components/Quiz/Quiz";
+import {AnimatePresence} from "framer-motion";
 
 function App(){
 
@@ -114,7 +115,33 @@ function App(){
         'Grčki i Turski deo',
         `4`
       ]);
-      
+
+///////////////////////     Responsive height       ///////////
+
+      useEffect(()=>{
+        console.log(window.screen.height + "px");
+        //proverava da li se upotrebljava mobilni
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+
+
+            if (window.screen.height > 900) {
+              const responsive = {
+                height : "800px"
+              }
+              setResponsiveHeight(responsive)
+            }
+            else{
+              const responsive = {
+                height : window.screen.height - 120 + "px"
+             }
+             setResponsiveHeight(responsive)
+            }
+        }
+    },[])
+    
+    const [responsiveHeight, setResponsiveHeight] = useState ();
+
+           
 ///////////////////////     StartGame  (suffle all array)       ///////////
       
 
@@ -297,35 +324,45 @@ const suffleAnswers = () =>{
       }
     }
 
+      //////////////////////////AnimatePresence
 
-
-
-  
-
+      //da bi useLocation radio mora da se HashRouter ili BrowserRouter prebace u neku drugu fajlu. Ja sam prebacio u index.js
+    const location = useLocation();
 
     return(
         <>
-            <HashRouter>
-                <Route path = "/" exact>
-                    <StartGame suffle={suffle}/>
-                </Route>
-                <Route path = "/choosePlayer">
-                    <TablePlayer card={card} shuffleOption={shuffleOption} choosenPlayer={choosenPlayer}/>
-                </Route>
-                <Route path = "/game">
-                    <QuizStart options={options} chooseOption={chooseOption}/>
-                </Route>
-                <Route path = "/quiz" >
-                    <Quiz Questions={Questions} 
-                          Answers={Answers} 
-                          Responds={Responds} 
-                          options={options} 
-                          playerCard={playerCard}
-                          // ovde mora da se napise da bi se povezao u Quiz.js sa props
-                          newQuestions={newQuestions}
-                          />
-                </Route>
-            </HashRouter>
+          
+
+                <AnimatePresence exitBeforeEnter initial={false}>
+                  <Switch location={location} key={location.pathname}>
+                    <Route path = "/" exact>
+                        <StartGame suffle={suffle} responsiveHeight={responsiveHeight}/>
+                    </Route>
+                    <Route path = "/choosePlayer">
+                        <TablePlayer card={card} 
+                                    shuffleOption={shuffleOption} 
+                                    choosenPlayer={choosenPlayer}/>
+                    </Route>
+                    <Route path = "/game">
+                        <QuizStart options={options} 
+                                  chooseOption={chooseOption}
+                                  responsiveHeight={responsiveHeight}/>
+                    </Route>
+                    <Route path = "/quiz" >
+                        <Quiz Questions={Questions} 
+                              Answers={Answers} 
+                              Responds={Responds} 
+                              options={options} 
+                              playerCard={playerCard}
+                              // ovde mora da se napise da bi se povezao u Quiz.js sa props
+                              newQuestions={newQuestions}
+                              responsiveHeight={responsiveHeight}
+                              />
+                    </Route>
+                  </Switch>
+                </AnimatePresence>
+
+            
         </>
     )
 }

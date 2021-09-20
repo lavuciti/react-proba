@@ -20,27 +20,6 @@
     line-height: 90px !important;
     font-size: 45px !important;
 }
-@media(max-width: 768px){
 
-    .textWrong{
-      margin-top: 5px;
-      font-size: 30px;
-      margin-bottom: 5px !important;
-    }
-    .textCorrect{
-      font-size: 30px;
-      margin-bottom: 30px !important;
-      margin-top: 10px;
-    }
-    .quiz .h-100{
-      height: auto !important;
-    }
-    .quiz {
-      margin: 0 !important;
-    }
-    .quiz .w-100{
-      border-bottom: 1px solid #ddd;
-    }
-  }
 
   

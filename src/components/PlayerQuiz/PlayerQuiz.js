@@ -1,5 +1,7 @@
 import React from 'react';
+import {AnimatePresence, motion} from "framer-motion";
 import "./PlayerQuiz.css";
+
 
 
 function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton, displayMobileThree, displayMobileFour}){
@@ -15,17 +17,28 @@ function PlayerQuiz({playerQuiz, questionNumber, score, nextQuestion, editButton
 
 
      return(
-
-        <div className="player text-center col-4">
+        <motion.div 
+        className="player text-center col-4" 
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{ opacity: 0 }}
+        >
             {displayMobileThree && <h2>{playerQuiz.capitalPlayer}</h2>}
-            <img src={"https://lavuciti.github.io/react-proba/img/"+playerQuiz.player+".jpg"} className="card-img-top" alt={playerQuiz.capitalPlayer}></img>
-            {displayMobileFour && <h2>{playerQuiz.capitalPlayer}</h2>}
+            <img src={"https://lavuciti.github.io/react-proba/img/"+playerQuiz.player+".jpg"} className="card-img-top" alt={playerQuiz.capitalPlayer}></img> 
             <div className="card-body">
-                <p id="scorePlayer"className="lead">Ukupno poena : {score}</p>
-                <p id = "countRounds" className = "pt-1">Pitanje {questionNumber}</p>
-                {actionButtons}
+                <div className="responsivePlayerQuizDisplayNone">
+                    {displayMobileFour && <h2>{playerQuiz.capitalPlayer}</h2>}
+                    <p id="scorePlayer"className="lead">Ukupno poena : {score}</p>
+                </div>
+                <div className="responsivePlayerQuiz">
+                    <p id="scorePlayer"className="lead">{playerQuiz.capitalPlayer} poena : {score}</p>
+                </div>
+                <div className="responsivePlayerQuizFlex">
+                    <p id = "countRounds" className = "pt-1">Pitanje {questionNumber}</p>
+                    {actionButtons}
+                </div>
             </div>
-        </div>
+        </motion.div>
 
 
 
