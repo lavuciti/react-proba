@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-proba/static/css/main.e9285bc6.chunk.css",
+    "main.css": "/react-proba/static/css/main.cf3afcd8.chunk.css",
     "main.js": "/react-proba/static/js/main.62aa9111.chunk.js",
     "main.js.map": "/react-proba/static/js/main.62aa9111.chunk.js.map",
     "runtime-main.js": "/react-proba/static/js/runtime-main.e0cc3d60.js",
@@ -10,14 +10,14 @@
     "static/js/2.5b306a68.chunk.js.map": "/react-proba/static/js/2.5b306a68.chunk.js.map",
     "index.html": "/react-proba/index.html",
     "static/css/2.983f79de.chunk.css.map": "/react-proba/static/css/2.983f79de.chunk.css.map",
-    "static/css/main.e9285bc6.chunk.css.map": "/react-proba/static/css/main.e9285bc6.chunk.css.map",
+    "static/css/main.cf3afcd8.chunk.css.map": "/react-proba/static/css/main.cf3afcd8.chunk.css.map",
     "static/js/2.5b306a68.chunk.js.LICENSE.txt": "/react-proba/static/js/2.5b306a68.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e0cc3d60.js",
     "static/css/2.983f79de.chunk.css",
     "static/js/2.5b306a68.chunk.js",
-    "static/css/main.e9285bc6.chunk.css",
+    "static/css/main.cf3afcd8.chunk.css",
     "static/js/main.62aa9111.chunk.js"
   ]
 }
