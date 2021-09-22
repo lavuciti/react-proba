@@ -119,25 +119,37 @@ function App(){
 ///////////////////////     Responsive height       ///////////
 
       useEffect(()=>{
-        console.log(window.screen.height + "px");
         //proverava da li se upotrebljava mobilni
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 
 
-            if (window.screen.height > 900) {
+            
+            if (window.screen.height>500 && window.screen.height < 550) {
               const responsive = {
-                height : "800px"
-              }
-              setResponsiveHeight(responsive)
-            }
-            else{
-              const responsive = {
-                height : window.screen.height - 120 + "px"
+                height : "380px"
              }
              setResponsiveHeight(responsive)
             }
+            else if(window.screen.height>=550 && window.screen.height < 600) {
+              const responsive = {
+                height : "420px"
+             }
+             setResponsiveHeight(responsive)
+            }
+            else if(window.screen.height>=600 && window.screen.height < 650) {
+              const responsive = {
+                height : "470px"
+             }
+             setResponsiveHeight(responsive)
+            }
+           else if(window.screen.height>=650 && window.screen.height < 1000) {
+            const responsive = {
+              height : "520px"
+           }
+           setResponsiveHeight(responsive)
+          }
         }
-    },[])
+      },[])
     
     const [responsiveHeight, setResponsiveHeight] = useState ();
 

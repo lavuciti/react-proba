@@ -25,7 +25,7 @@ function Quiz(props, {Questions, Responds, Answers, playerCard, responsiveHeight
         }
     },[])
 
-    const [roundNumber, setRoundNumber] = useState(3)
+    const [roundNumber, setRoundNumber] = useState(5)
     const [questionNumber, setQuestionNumber] = useState (1);
     const[score, setscore] = useState(0);
     const[editButton, setEditButton] = useState(false)
@@ -167,7 +167,7 @@ function Quiz(props, {Questions, Responds, Answers, playerCard, responsiveHeight
                                 
                                 
                                 {disappearOption &&
-                                    <div className="optionsResponsive justify-content-center align-items-center">
+                                    <div className="optionsResponsive">
                                         {props.Answers.map((Answers, index)=> 
                                     
                                             <motion.div 
