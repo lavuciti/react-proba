@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import StartGame from "./components/StartGame/StartGame";
 import {Switch, Route, useLocation} from "react-router-dom";
 import TablePlayer from "./components/TablePlayer/TablePlayer";
@@ -116,46 +116,46 @@ function App(){
         `4`
       ]);
 
-///////////////////////     Responsive height       ///////////
+///////////////////////     Responsive height (resio na drugi nacin)       ///////////
 
-      useEffect(()=>{
-        //proverava da li se upotrebljava mobilni
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      // useEffect(()=>{
+      //   //proverava da li se upotrebljava mobilni
+      //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 
-          console.log(window.innerHeight);
+      //     console.log(window.innerHeight);
             
-          if(window.innerHeight>=450 && window.innerHeight< 500) {
-            const responsive = {
-              height : "350px"
-            }
-            setResponsiveHeight(responsive)
-          }
-          else if(window.innerHeight>=500 && window.innerHeight < 550) {
-            const responsive = {
-              height : "400px"
-            }
-            setResponsiveHeight(responsive)
-          }
-          else if(window.innerHeight>=550 && window.innerHeight< 600) {
-            const responsive = {
-              height : "435px"
-            }
-            setResponsiveHeight(responsive)
-          }
-          else if(window.innerHeight>=600 && window.innerHeight< 650) {
-            const responsive = {
-              height : "480px"
-            }
-            setResponsiveHeight(responsive)
-            }
-           else if(window.innerHeight>=650 && window.innerHeight< 1000) {
-            const responsive = {
-              height : "520px"
-           }
-           setResponsiveHeight(responsive)
-          }
-        }
-      },[])
+      //     if(window.innerHeight>=450 && window.innerHeight< 500) {
+      //       const responsive = {
+      //         height : "350px"
+      //       }
+      //       setResponsiveHeight(responsive)
+      //     }
+      //     else if(window.innerHeight>=500 && window.innerHeight < 550) {
+      //       const responsive = {
+      //         height : "400px"
+      //       }
+      //       setResponsiveHeight(responsive)
+      //     }
+      //     else if(window.innerHeight>=550 && window.innerHeight< 600) {
+      //       const responsive = {
+      //         height : "435px"
+      //       }
+      //       setResponsiveHeight(responsive)
+      //     }
+      //     else if(window.innerHeight>=600 && window.innerHeight< 650) {
+      //       const responsive = {
+      //         height : "480px"
+      //       }
+      //       setResponsiveHeight(responsive)
+      //       }
+      //      else if(window.innerHeight>=650 && window.innerHeight< 1000) {
+      //       const responsive = {
+      //         height : "520px"
+      //      }
+      //      setResponsiveHeight(responsive)
+      //     }
+      //   }
+      // },[])
      
     const [responsiveHeight, setResponsiveHeight] = useState ();
 
