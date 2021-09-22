@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-proba/static/css/main.63a1bb44.chunk.css",
-    "main.js": "/react-proba/static/js/main.d6546cdd.chunk.js",
-    "main.js.map": "/react-proba/static/js/main.d6546cdd.chunk.js.map",
+    "main.js": "/react-proba/static/js/main.dc65e374.chunk.js",
+    "main.js.map": "/react-proba/static/js/main.dc65e374.chunk.js.map",
     "runtime-main.js": "/react-proba/static/js/runtime-main.e0cc3d60.js",
     "runtime-main.js.map": "/react-proba/static/js/runtime-main.e0cc3d60.js.map",
     "static/css/2.983f79de.chunk.css": "/react-proba/static/css/2.983f79de.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.983f79de.chunk.css",
     "static/js/2.5b306a68.chunk.js",
     "static/css/main.63a1bb44.chunk.css",
-    "static/js/main.d6546cdd.chunk.js"
+    "static/js/main.dc65e374.chunk.js"
   ]
 }
