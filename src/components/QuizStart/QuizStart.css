@@ -172,6 +172,8 @@ header {
         height: 100%;
         background-color: rgb(200 211 229 / 18%);
         border-bottom: 1px solid #ddd;
+        padding-left: 1px;
+        padding-right: 1px;
       }
       .questions{
         margin-bottom: 0;
@@ -195,6 +197,9 @@ header {
       .options{
         height: 380px !important;
       }
+      #scorePlayer{
+        margin-bottom: 10px;
+      }
     }
   }
   
@@ -206,6 +211,9 @@ header {
       .player img {
         height: 200px !important;
       }
+      #scorePlayer{
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -213,9 +221,6 @@ header {
     @media  screen and  (max-width: 1024px)  {
       .options{
         height: 480px !important;
-      }
-      .player img {
-        height: 200px !important;
       }
       #countRounds{
         padding-top: 0!important;
@@ -226,6 +231,9 @@ header {
       }
       .card-body{
         padding: 1rem !important;
+      }
+      #scorePlayer{
+        margin-bottom: 0px;
       }
     }
   }
@@ -239,7 +247,6 @@ header {
         height: 120px !important;
       }
       .player img {
-        height: 200px !important;
         margin-top: 30px;
       }
       #scorePlayer{
@@ -252,9 +259,56 @@ header {
   @media  screen and  (min-height: 700px)  {
     @media  screen and  (max-width: 1024px)  {
       .options{
-        height: 530px !important;
+        height: 560px !important;
+      }
+      #countRounds{
+        margin-bottom: 35px;
+      }
+      .player img {
+        height: 220px !important;
+        margin-top: 25px;
+      }
+      .questions{
+        font-size: 22px !important;
+      }
+      .option{
+        height: 90px
+      }
+      .optionP{
+        font-size: 22px !important;
+      }
+    }
+  }
+  
+  @media  screen and  (min-height: 750px)  {
+    @media  screen and  (max-width: 1024px)  {
+      header{
+        height: 150px !important;
+      }
+      .options{
+        height: 580px !important;
+      }
+      .questions{
+        font-size: 22px !important;
+      }
+      #countRounds{
+        margin-bottom: 35px;
+      }
+      .player img {
+        height: 240px !important;
+        margin-top: 25px;
+      }
+      #playerBtn{
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media  screen and  (min-height: 850px)  {
+    @media  screen and  (max-width: 1024px)  {
+      .options{
+        height: 650px !important;
       }
 
     }
   }
-  
