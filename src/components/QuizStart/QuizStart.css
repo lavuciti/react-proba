@@ -360,6 +360,10 @@ header {
         .responsivePlayerQuiz{
           display: block !important;  
         }
+        .responsivePlayerQuizFlex{
+          display: block;
+          justify-content: space-around;
+        }
         .textWrong{
           margin: 0 !important;
         }
@@ -415,7 +419,7 @@ header {
         }
         header{
           border-bottom: none;
-          height: 120px;
+          height: 120px !important;
         }
         .player img {
           height: 200px !important;
@@ -426,6 +430,10 @@ header {
         }
         .responsivePlayerQuiz{
           display: block !important;  
+        }
+        .responsivePlayerQuizFlex{
+          display: block;
+          justify-content: space-around;
         }
         .textWrong{
           margin: 0 !important;
