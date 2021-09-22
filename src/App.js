@@ -122,7 +122,7 @@ function App(){
         //proverava da li se upotrebljava mobilni
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 
-
+          console.log(window.innerHeight);
             
             if (window.screen.height>500 && window.screen.height < 550) {
               const responsive = {
@@ -144,7 +144,7 @@ function App(){
             }
            else if(window.screen.height>=650 && window.screen.height < 1000) {
             const responsive = {
-              height : "520px"
+              height : window.innerHeight + "px"
            }
            setResponsiveHeight(responsive)
           }
