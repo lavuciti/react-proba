@@ -124,33 +124,39 @@ function App(){
 
           console.log(window.innerHeight);
             
-            if (window.screen.height>500 && window.screen.height < 550) {
-              const responsive = {
-                height : "380px"
-             }
-             setResponsiveHeight(responsive)
-            }
-            else if(window.screen.height>=550 && window.screen.height < 600) {
-              const responsive = {
-                height : "420px"
-             }
-             setResponsiveHeight(responsive)
-            }
-            else if(window.screen.height>=600 && window.screen.height < 650) {
-              const responsive = {
-                height : "470px"
-             }
-             setResponsiveHeight(responsive)
-            }
-           else if(window.screen.height>=650 && window.screen.height < 1000) {
+          if(window.innerHeight>=450 && window.innerHeight< 500) {
             const responsive = {
-              height : window.innerHeight + "px"
+              height : "350px"
+            }
+            setResponsiveHeight(responsive)
+          }
+          else if(window.innerHeight>=500 && window.innerHeight < 550) {
+            const responsive = {
+              height : "400px"
+            }
+            setResponsiveHeight(responsive)
+          }
+          else if(window.innerHeight>=550 && window.innerHeight< 600) {
+            const responsive = {
+              height : "435px"
+            }
+            setResponsiveHeight(responsive)
+          }
+          else if(window.innerHeight>=600 && window.innerHeight< 650) {
+            const responsive = {
+              height : "480px"
+            }
+            setResponsiveHeight(responsive)
+            }
+           else if(window.innerHeight>=650 && window.innerHeight< 1000) {
+            const responsive = {
+              height : "520px"
            }
            setResponsiveHeight(responsive)
           }
         }
       },[])
-    
+     
     const [responsiveHeight, setResponsiveHeight] = useState ();
 
            
